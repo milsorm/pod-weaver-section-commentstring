@@ -1,4 +1,4 @@
-pod-weaver-section-requires
-===========================
+pod-weaver-section-commentstring
+================================
 
-Pod::Weaver::Section::Requires - Pod::Weaver section with all used modules from package excluding listed ones
+Pod::Weaver::Section::CommentString - Pod::Weaver section for gathering comment content from keyword style to new section (like abstracts)
