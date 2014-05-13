@@ -26,6 +26,7 @@ use warnings;
 use Moose;
 
 with 'Pod::Weaver::Role::Section';
+with 'Pod::Weaver::Role::StringFromComment';
 
 use aliased 'Pod::Elemental::Element::Nested';
 use aliased 'Pod::Elemental::Element::Pod5::Command';
@@ -63,7 +64,7 @@ sub _get_comment {
 	my ( $self, $input ) = @_;
 
 	my $keyword = $self->comment;
-	
+
 	my $comment = $self->_extract_comment_content( $input->{ppi_document}, $keyword );
 	
 	return $comment if $comment;
