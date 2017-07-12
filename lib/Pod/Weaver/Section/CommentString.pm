@@ -1,5 +1,7 @@
-package Pod::Weaver::Section::CommentString 0.01;
+package Pod::Weaver::Section::CommentString;
 # ABSTRACT: Add Pod::Weaver section with content extracted from comment with specified keyword
+
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
