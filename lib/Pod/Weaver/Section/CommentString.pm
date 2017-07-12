@@ -1,7 +1,7 @@
 package Pod::Weaver::Section::CommentString;
 # ABSTRACT: Add Pod::Weaver section with content extracted from comment with specified keyword
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -72,6 +72,8 @@ sub _get_comment {
 	return $comment if $comment;
 	
 	( $comment ) = $input->{ppi_document}->serialize =~ /^\s*#+\s*$keyword:\s*(.+)$/m;
+
+	return '' unless defined $comment;
 	
 	return $comment;
 }
